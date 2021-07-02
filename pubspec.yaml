@@ -1,0 +1,14 @@
+name: openapi_sample
+description: Sample for OpenAPI
+version: 1.0.0
+publish_to: none
+
+environment:
+  flutter: ">=2.0.0"
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  pet_api:
+    path: .pet_api
