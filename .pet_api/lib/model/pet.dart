@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.7
+// 
 
 // ignore_for_file: unused_import
 
@@ -15,13 +15,11 @@ part 'pet.g.dart';
 
 abstract class Pet implements Built<Pet, PetBuilder> {
 
-    @nullable
-    @BuiltValueField(wireName: r'id')
-    int get id;
+        @BuiltValueField(wireName: r'id')
+    int? get id;
 
-    @nullable
-    @BuiltValueField(wireName: r'category')
-    Category get category;
+        @BuiltValueField(wireName: r'category')
+    Category? get category;
 
     @BuiltValueField(wireName: r'name')
     String get name;
@@ -29,14 +27,12 @@ abstract class Pet implements Built<Pet, PetBuilder> {
     @BuiltValueField(wireName: r'photoUrls')
     BuiltList<String> get photoUrls;
 
-    @nullable
-    @BuiltValueField(wireName: r'tags')
-    BuiltList<Tag> get tags;
+        @BuiltValueField(wireName: r'tags')
+    BuiltList<Tag>? get tags;
 
     /// pet status in the store
-    @nullable
-    @BuiltValueField(wireName: r'status')
-    PetStatusEnum get status;
+        @BuiltValueField(wireName: r'status')
+    PetStatusEnum? get status;
     // enum statusEnum {  available,  pending,  sold,  };
 
     Pet._();
@@ -57,9 +53,9 @@ class _$PetSerializer implements StructuredSerializer<Pet> {
     final String wireName = r'Pet';
 
     @override
-    Iterable<Object> serialize(Serializers serializers, Pet object,
+    Iterable<Object?> serialize(Serializers serializers, Pet object,
         {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object>[];
+        final result = <Object?>[];
         if (object.id != null) {
             result
                 ..add(r'id')
@@ -96,7 +92,7 @@ class _$PetSerializer implements StructuredSerializer<Pet> {
     }
 
     @override
-    Pet deserialize(Serializers serializers, Iterable<Object> serialized,
+    Pet deserialize(Serializers serializers, Iterable<Object?> serialized,
         {FullType specifiedType = FullType.unspecified}) {
         final result = PetBuilder();
 

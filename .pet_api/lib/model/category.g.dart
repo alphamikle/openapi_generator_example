@@ -1,5 +1,4 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// @dart=2.7
 
 part of 'category.dart';
 
@@ -9,11 +8,11 @@ part of 'category.dart';
 
 class _$Category extends Category {
   @override
-  final int id;
+  final int? id;
   @override
-  final String name;
+  final String? name;
 
-  factory _$Category([void Function(CategoryBuilder) updates]) =>
+  factory _$Category([void Function(CategoryBuilder)? updates]) =>
       (new CategoryBuilder()..update(updates)).build();
 
   _$Category._({this.id, this.name}) : super._();
@@ -46,24 +45,25 @@ class _$Category extends Category {
 }
 
 class CategoryBuilder implements Builder<Category, CategoryBuilder> {
-  _$Category _$v;
+  _$Category? _$v;
 
-  int _id;
-  int get id => _$this._id;
-  set id(int id) => _$this._id = id;
+  int? _id;
+  int? get id => _$this._id;
+  set id(int? id) => _$this._id = id;
 
-  String _name;
-  String get name => _$this._name;
-  set name(String name) => _$this._name = name;
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
 
   CategoryBuilder() {
     Category._initializeBuilder(this);
   }
 
   CategoryBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _name = _$v.name;
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _name = $v.name;
       _$v = null;
     }
     return this;
@@ -71,14 +71,12 @@ class CategoryBuilder implements Builder<Category, CategoryBuilder> {
 
   @override
   void replace(Category other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Category;
   }
 
   @override
-  void update(void Function(CategoryBuilder) updates) {
+  void update(void Function(CategoryBuilder)? updates) {
     if (updates != null) updates(this);
   }
 

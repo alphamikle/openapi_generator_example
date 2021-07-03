@@ -1,5 +1,4 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// @dart=2.7
 
 part of 'tag.dart';
 
@@ -9,11 +8,11 @@ part of 'tag.dart';
 
 class _$Tag extends Tag {
   @override
-  final int id;
+  final int? id;
   @override
-  final String name;
+  final String? name;
 
-  factory _$Tag([void Function(TagBuilder) updates]) =>
+  factory _$Tag([void Function(TagBuilder)? updates]) =>
       (new TagBuilder()..update(updates)).build();
 
   _$Tag._({this.id, this.name}) : super._();
@@ -46,24 +45,25 @@ class _$Tag extends Tag {
 }
 
 class TagBuilder implements Builder<Tag, TagBuilder> {
-  _$Tag _$v;
+  _$Tag? _$v;
 
-  int _id;
-  int get id => _$this._id;
-  set id(int id) => _$this._id = id;
+  int? _id;
+  int? get id => _$this._id;
+  set id(int? id) => _$this._id = id;
 
-  String _name;
-  String get name => _$this._name;
-  set name(String name) => _$this._name = name;
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
 
   TagBuilder() {
     Tag._initializeBuilder(this);
   }
 
   TagBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _name = _$v.name;
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _name = $v.name;
       _$v = null;
     }
     return this;
@@ -71,14 +71,12 @@ class TagBuilder implements Builder<Tag, TagBuilder> {
 
   @override
   void replace(Tag other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Tag;
   }
 
   @override
-  void update(void Function(TagBuilder) updates) {
+  void update(void Function(TagBuilder)? updates) {
     if (updates != null) updates(this);
   }
 

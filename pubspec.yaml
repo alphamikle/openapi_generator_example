@@ -12,3 +12,5 @@ dependencies:
     sdk: flutter
   pet_api:
     path: .pet_api
+  dio: ^4.0.0
+  built_collection: ^5.1.0

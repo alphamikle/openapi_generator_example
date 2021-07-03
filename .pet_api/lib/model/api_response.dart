@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.7
+// 
 
 // ignore_for_file: unused_import
 
@@ -12,17 +12,14 @@ part 'api_response.g.dart';
 
 abstract class ApiResponse implements Built<ApiResponse, ApiResponseBuilder> {
 
-    @nullable
-    @BuiltValueField(wireName: r'code')
-    int get code;
+        @BuiltValueField(wireName: r'code')
+    int? get code;
 
-    @nullable
-    @BuiltValueField(wireName: r'type')
-    String get type;
+        @BuiltValueField(wireName: r'type')
+    String? get type;
 
-    @nullable
-    @BuiltValueField(wireName: r'message')
-    String get message;
+        @BuiltValueField(wireName: r'message')
+    String? get message;
 
     ApiResponse._();
 
@@ -42,9 +39,9 @@ class _$ApiResponseSerializer implements StructuredSerializer<ApiResponse> {
     final String wireName = r'ApiResponse';
 
     @override
-    Iterable<Object> serialize(Serializers serializers, ApiResponse object,
+    Iterable<Object?> serialize(Serializers serializers, ApiResponse object,
         {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object>[];
+        final result = <Object?>[];
         if (object.code != null) {
             result
                 ..add(r'code')
@@ -67,7 +64,7 @@ class _$ApiResponseSerializer implements StructuredSerializer<ApiResponse> {
     }
 
     @override
-    ApiResponse deserialize(Serializers serializers, Iterable<Object> serialized,
+    ApiResponse deserialize(Serializers serializers, Iterable<Object?> serialized,
         {FullType specifiedType = FullType.unspecified}) {
         final result = ApiResponseBuilder();
 

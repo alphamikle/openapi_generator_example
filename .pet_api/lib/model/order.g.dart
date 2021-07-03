@@ -1,5 +1,4 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// @dart=2.7
 
 part of 'order.dart';
 
@@ -63,24 +62,25 @@ class _$OrderStatusEnumSerializer
   @override
   OrderStatusEnum deserialize(Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
-      OrderStatusEnum.valueOf(_fromWire[serialized] ?? serialized as String);
+      OrderStatusEnum.valueOf(
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 
 class _$Order extends Order {
   @override
-  final int id;
+  final int? id;
   @override
-  final int petId;
+  final int? petId;
   @override
-  final int quantity;
+  final int? quantity;
   @override
-  final DateTime shipDate;
+  final DateTime? shipDate;
   @override
-  final OrderStatusEnum status;
+  final OrderStatusEnum? status;
   @override
-  final bool complete;
+  final bool? complete;
 
-  factory _$Order([void Function(OrderBuilder) updates]) =>
+  factory _$Order([void Function(OrderBuilder)? updates]) =>
       (new OrderBuilder()..update(updates)).build();
 
   _$Order._(
@@ -137,44 +137,45 @@ class _$Order extends Order {
 }
 
 class OrderBuilder implements Builder<Order, OrderBuilder> {
-  _$Order _$v;
+  _$Order? _$v;
 
-  int _id;
-  int get id => _$this._id;
-  set id(int id) => _$this._id = id;
+  int? _id;
+  int? get id => _$this._id;
+  set id(int? id) => _$this._id = id;
 
-  int _petId;
-  int get petId => _$this._petId;
-  set petId(int petId) => _$this._petId = petId;
+  int? _petId;
+  int? get petId => _$this._petId;
+  set petId(int? petId) => _$this._petId = petId;
 
-  int _quantity;
-  int get quantity => _$this._quantity;
-  set quantity(int quantity) => _$this._quantity = quantity;
+  int? _quantity;
+  int? get quantity => _$this._quantity;
+  set quantity(int? quantity) => _$this._quantity = quantity;
 
-  DateTime _shipDate;
-  DateTime get shipDate => _$this._shipDate;
-  set shipDate(DateTime shipDate) => _$this._shipDate = shipDate;
+  DateTime? _shipDate;
+  DateTime? get shipDate => _$this._shipDate;
+  set shipDate(DateTime? shipDate) => _$this._shipDate = shipDate;
 
-  OrderStatusEnum _status;
-  OrderStatusEnum get status => _$this._status;
-  set status(OrderStatusEnum status) => _$this._status = status;
+  OrderStatusEnum? _status;
+  OrderStatusEnum? get status => _$this._status;
+  set status(OrderStatusEnum? status) => _$this._status = status;
 
-  bool _complete;
-  bool get complete => _$this._complete;
-  set complete(bool complete) => _$this._complete = complete;
+  bool? _complete;
+  bool? get complete => _$this._complete;
+  set complete(bool? complete) => _$this._complete = complete;
 
   OrderBuilder() {
     Order._initializeBuilder(this);
   }
 
   OrderBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _petId = _$v.petId;
-      _quantity = _$v.quantity;
-      _shipDate = _$v.shipDate;
-      _status = _$v.status;
-      _complete = _$v.complete;
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _petId = $v.petId;
+      _quantity = $v.quantity;
+      _shipDate = $v.shipDate;
+      _status = $v.status;
+      _complete = $v.complete;
       _$v = null;
     }
     return this;
@@ -182,14 +183,12 @@ class OrderBuilder implements Builder<Order, OrderBuilder> {
 
   @override
   void replace(Order other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Order;
   }
 
   @override
-  void update(void Function(OrderBuilder) updates) {
+  void update(void Function(OrderBuilder)? updates) {
     if (updates != null) updates(this);
   }
 

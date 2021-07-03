@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.7
+// 
 
 // ignore_for_file: unused_import
 
@@ -12,38 +12,30 @@ part 'user.g.dart';
 
 abstract class User implements Built<User, UserBuilder> {
 
-    @nullable
-    @BuiltValueField(wireName: r'id')
-    int get id;
+        @BuiltValueField(wireName: r'id')
+    int? get id;
 
-    @nullable
-    @BuiltValueField(wireName: r'username')
-    String get username;
+        @BuiltValueField(wireName: r'username')
+    String? get username;
 
-    @nullable
-    @BuiltValueField(wireName: r'firstName')
-    String get firstName;
+        @BuiltValueField(wireName: r'firstName')
+    String? get firstName;
 
-    @nullable
-    @BuiltValueField(wireName: r'lastName')
-    String get lastName;
+        @BuiltValueField(wireName: r'lastName')
+    String? get lastName;
 
-    @nullable
-    @BuiltValueField(wireName: r'email')
-    String get email;
+        @BuiltValueField(wireName: r'email')
+    String? get email;
 
-    @nullable
-    @BuiltValueField(wireName: r'password')
-    String get password;
+        @BuiltValueField(wireName: r'password')
+    String? get password;
 
-    @nullable
-    @BuiltValueField(wireName: r'phone')
-    String get phone;
+        @BuiltValueField(wireName: r'phone')
+    String? get phone;
 
     /// User Status
-    @nullable
-    @BuiltValueField(wireName: r'userStatus')
-    int get userStatus;
+        @BuiltValueField(wireName: r'userStatus')
+    int? get userStatus;
 
     User._();
 
@@ -63,9 +55,9 @@ class _$UserSerializer implements StructuredSerializer<User> {
     final String wireName = r'User';
 
     @override
-    Iterable<Object> serialize(Serializers serializers, User object,
+    Iterable<Object?> serialize(Serializers serializers, User object,
         {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object>[];
+        final result = <Object?>[];
         if (object.id != null) {
             result
                 ..add(r'id')
@@ -118,7 +110,7 @@ class _$UserSerializer implements StructuredSerializer<User> {
     }
 
     @override
-    User deserialize(Serializers serializers, Iterable<Object> serialized,
+    User deserialize(Serializers serializers, Iterable<Object?> serialized,
         {FullType specifiedType = FullType.unspecified}) {
         final result = UserBuilder();
 

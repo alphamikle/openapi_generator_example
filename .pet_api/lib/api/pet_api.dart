@@ -1,22 +1,21 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.7
+//
 
 // ignore_for_file: unused_import
 
 import 'dart:async';
-import 'package:dio/dio.dart';
-import 'package:built_value/serializer.dart';
-
 import 'dart:typed_data';
+
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/serializer.dart';
+import 'package:dio/dio.dart';
 import 'package:pet_api/api_util.dart';
 import 'package:pet_api/model/api_response.dart';
 import 'package:pet_api/model/pet.dart';
 
 class PetApi {
-
   final Dio _dio;
 
   final Serializers _serializers;
@@ -25,15 +24,15 @@ class PetApi {
 
   /// Add a new pet to the store
   ///
-  /// 
+  ///
   Future<Response<void>> addPet(
-    Pet body, { 
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    Pet body, {
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/pet',
@@ -65,27 +64,25 @@ class PetApi {
     const _type = FullType(Pet);
     _bodyData = _serializers.serialize(body, specifiedType: _type);
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+    _request.data = _bodyData;
+
+    final _response = await _dio.fetch<dynamic>(_request);
 
     return _response;
   }
 
   /// Deletes a pet
   ///
-  /// 
+  ///
   Future<Response<void>> deletePet(
-    int petId, { 
-    String apiKey,
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    int petId, {
+    String? apiKey,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/pet/{petId}'.replaceAll('{' r'petId' '}', petId.toString()),
@@ -114,11 +111,9 @@ class PetApi {
 
     dynamic _bodyData;
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+    _request.data = _bodyData;
+
+    final _response = await _dio.fetch<dynamic>(_request);
 
     return _response;
   }
@@ -127,13 +122,13 @@ class PetApi {
   ///
   /// Multiple status values can be provided with comma separated strings
   Future<Response<BuiltList<Pet>>> findPetsByStatus(
-    BuiltList<String> status, { 
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    BuiltList<String> status, {
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/pet/findByStatus',
@@ -164,11 +159,9 @@ class PetApi {
 
     dynamic _bodyData;
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+    _request.data = _bodyData;
+
+    final _response = await _dio.fetch<dynamic>(_request);
 
     const _responseType = FullType(BuiltList, [FullType(Pet)]);
     final BuiltList<Pet> _responseData = _serializers.deserialize(
@@ -180,7 +173,7 @@ class PetApi {
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
-      request: _response.request,
+      requestOptions: _response.requestOptions,
       redirects: _response.redirects,
       statusCode: _response.statusCode,
       statusMessage: _response.statusMessage,
@@ -192,13 +185,13 @@ class PetApi {
   ///
   /// Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
   Future<Response<BuiltList<Pet>>> findPetsByTags(
-    BuiltList<String> tags, { 
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    BuiltList<String> tags, {
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/pet/findByTags',
@@ -229,11 +222,9 @@ class PetApi {
 
     dynamic _bodyData;
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+    _request.data = _bodyData;
+
+    final _response = await _dio.fetch<dynamic>(_request);
 
     const _responseType = FullType(BuiltList, [FullType(Pet)]);
     final BuiltList<Pet> _responseData = _serializers.deserialize(
@@ -245,7 +236,7 @@ class PetApi {
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
-      request: _response.request,
+      requestOptions: _response.requestOptions,
       redirects: _response.redirects,
       statusCode: _response.statusCode,
       statusMessage: _response.statusMessage,
@@ -257,13 +248,13 @@ class PetApi {
   ///
   /// Returns a single pet
   Future<Response<Pet>> getPetById(
-    int petId, { 
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    int petId, {
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/pet/{petId}'.replaceAll('{' r'petId' '}', petId.toString()),
@@ -293,11 +284,10 @@ class PetApi {
 
     dynamic _bodyData;
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+    _request.data = _bodyData;
+
+    _request.path = _dio.options.baseUrl + _request.path;
+    final _response = await _dio.fetch<dynamic>(_request);
 
     const _responseType = FullType(Pet);
     final _responseData = _serializers.deserialize(
@@ -309,7 +299,7 @@ class PetApi {
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
-      request: _response.request,
+      requestOptions: _response.requestOptions,
       redirects: _response.redirects,
       statusCode: _response.statusCode,
       statusMessage: _response.statusMessage,
@@ -319,15 +309,15 @@ class PetApi {
 
   /// Update an existing pet
   ///
-  /// 
+  ///
   Future<Response<void>> updatePet(
-    Pet body, { 
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    Pet body, {
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/pet',
@@ -359,28 +349,26 @@ class PetApi {
     const _type = FullType(Pet);
     _bodyData = _serializers.serialize(body, specifiedType: _type);
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+    _request.data = _bodyData;
+
+    final _response = await _dio.fetch<dynamic>(_request);
 
     return _response;
   }
 
   /// Updates a pet in the store with form data
   ///
-  /// 
+  ///
   Future<Response<void>> updatePetWithForm(
-    int petId, { 
-    String name,
-    String status,
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    int petId, {
+    String? name,
+    String? status,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/pet/{petId}'.replaceAll('{' r'petId' '}', petId.toString()),
@@ -413,28 +401,26 @@ class PetApi {
       if (status != null) r'status': encodeFormParameter(_serializers, status, const FullType(String)),
     };
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+    _request.data = _bodyData;
+
+    final _response = await _dio.fetch<dynamic>(_request);
 
     return _response;
   }
 
   /// uploads an image
   ///
-  /// 
+  ///
   Future<Response<ApiResponse>> uploadFile(
-    int petId, { 
-    String additionalMetadata,
-    Uint8List file,
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    int petId, {
+    String? additionalMetadata,
+    Uint8List? file,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/pet/{petId}/uploadImage'.replaceAll('{' r'petId' '}', petId.toString()),
@@ -467,11 +453,9 @@ class PetApi {
       if (file != null) r'file': MultipartFile.fromBytes(file, filename: r'file'),
     });
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+    _request.data = _bodyData;
+
+    final _response = await _dio.fetch<dynamic>(_request);
 
     const _responseType = FullType(ApiResponse);
     final _responseData = _serializers.deserialize(
@@ -483,12 +467,11 @@ class PetApi {
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
-      request: _response.request,
+      requestOptions: _response.requestOptions,
       redirects: _response.redirects,
       statusCode: _response.statusCode,
       statusMessage: _response.statusMessage,
       extra: _response.extra,
     );
   }
-
 }

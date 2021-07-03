@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.7
+// 
 
 // ignore_for_file: unused_import
 
@@ -25,12 +25,12 @@ class StoreApi {
   /// For valid response try integer IDs with positive integer value. Negative or non-integer values will generate API errors
   Future<Response<void>> deleteOrder(
     int orderId, { 
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/store/order/{orderId}'.replaceAll('{' r'orderId' '}', orderId.toString()),
@@ -53,11 +53,10 @@ class StoreApi {
 
     dynamic _bodyData;
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+_request.data = _bodyData;
+    
+    final _response = await _dio.fetch<dynamic>(_request);
+    
 
     return _response;
   }
@@ -66,12 +65,12 @@ class StoreApi {
   ///
   /// Returns a map of status codes to quantities
   Future<Response<BuiltMap<String, int>>> getInventory({ 
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/store/inventory',
@@ -101,11 +100,10 @@ class StoreApi {
 
     dynamic _bodyData;
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+_request.data = _bodyData;
+    
+    final _response = await _dio.fetch<dynamic>(_request);
+    
 
     const _responseType = FullType(BuiltMap, [FullType(String), FullType(int)]);
     final BuiltMap<String, int> _responseData = _serializers.deserialize(
@@ -117,7 +115,7 @@ class StoreApi {
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
-      request: _response.request,
+      requestOptions: _response.requestOptions,
       redirects: _response.redirects,
       statusCode: _response.statusCode,
       statusMessage: _response.statusMessage,
@@ -130,12 +128,12 @@ class StoreApi {
   /// For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions
   Future<Response<Order>> getOrderById(
     int orderId, { 
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/store/order/{orderId}'.replaceAll('{' r'orderId' '}', orderId.toString()),
@@ -158,11 +156,10 @@ class StoreApi {
 
     dynamic _bodyData;
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+_request.data = _bodyData;
+    
+    final _response = await _dio.fetch<dynamic>(_request);
+    
 
     const _responseType = FullType(Order);
     final _responseData = _serializers.deserialize(
@@ -174,7 +171,7 @@ class StoreApi {
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
-      request: _response.request,
+      requestOptions: _response.requestOptions,
       redirects: _response.redirects,
       statusCode: _response.statusCode,
       statusMessage: _response.statusMessage,
@@ -187,12 +184,12 @@ class StoreApi {
   /// 
   Future<Response<Order>> placeOrder(
     Order body, { 
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/store/order',
@@ -218,11 +215,10 @@ class StoreApi {
     const _type = FullType(Order);
     _bodyData = _serializers.serialize(body, specifiedType: _type);
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+_request.data = _bodyData;
+    
+    final _response = await _dio.fetch<dynamic>(_request);
+    
 
     const _responseType = FullType(Order);
     final _responseData = _serializers.deserialize(
@@ -234,7 +230,7 @@ class StoreApi {
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
-      request: _response.request,
+      requestOptions: _response.requestOptions,
       redirects: _response.redirects,
       statusCode: _response.statusCode,
       statusMessage: _response.statusMessage,

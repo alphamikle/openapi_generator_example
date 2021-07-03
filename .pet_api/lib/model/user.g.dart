@@ -1,5 +1,4 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// @dart=2.7
 
 part of 'user.dart';
 
@@ -9,23 +8,23 @@ part of 'user.dart';
 
 class _$User extends User {
   @override
-  final int id;
+  final int? id;
   @override
-  final String username;
+  final String? username;
   @override
-  final String firstName;
+  final String? firstName;
   @override
-  final String lastName;
+  final String? lastName;
   @override
-  final String email;
+  final String? email;
   @override
-  final String password;
+  final String? password;
   @override
-  final String phone;
+  final String? phone;
   @override
-  final int userStatus;
+  final int? userStatus;
 
-  factory _$User([void Function(UserBuilder) updates]) =>
+  factory _$User([void Function(UserBuilder)? updates]) =>
       (new UserBuilder()..update(updates)).build();
 
   _$User._(
@@ -92,54 +91,55 @@ class _$User extends User {
 }
 
 class UserBuilder implements Builder<User, UserBuilder> {
-  _$User _$v;
+  _$User? _$v;
 
-  int _id;
-  int get id => _$this._id;
-  set id(int id) => _$this._id = id;
+  int? _id;
+  int? get id => _$this._id;
+  set id(int? id) => _$this._id = id;
 
-  String _username;
-  String get username => _$this._username;
-  set username(String username) => _$this._username = username;
+  String? _username;
+  String? get username => _$this._username;
+  set username(String? username) => _$this._username = username;
 
-  String _firstName;
-  String get firstName => _$this._firstName;
-  set firstName(String firstName) => _$this._firstName = firstName;
+  String? _firstName;
+  String? get firstName => _$this._firstName;
+  set firstName(String? firstName) => _$this._firstName = firstName;
 
-  String _lastName;
-  String get lastName => _$this._lastName;
-  set lastName(String lastName) => _$this._lastName = lastName;
+  String? _lastName;
+  String? get lastName => _$this._lastName;
+  set lastName(String? lastName) => _$this._lastName = lastName;
 
-  String _email;
-  String get email => _$this._email;
-  set email(String email) => _$this._email = email;
+  String? _email;
+  String? get email => _$this._email;
+  set email(String? email) => _$this._email = email;
 
-  String _password;
-  String get password => _$this._password;
-  set password(String password) => _$this._password = password;
+  String? _password;
+  String? get password => _$this._password;
+  set password(String? password) => _$this._password = password;
 
-  String _phone;
-  String get phone => _$this._phone;
-  set phone(String phone) => _$this._phone = phone;
+  String? _phone;
+  String? get phone => _$this._phone;
+  set phone(String? phone) => _$this._phone = phone;
 
-  int _userStatus;
-  int get userStatus => _$this._userStatus;
-  set userStatus(int userStatus) => _$this._userStatus = userStatus;
+  int? _userStatus;
+  int? get userStatus => _$this._userStatus;
+  set userStatus(int? userStatus) => _$this._userStatus = userStatus;
 
   UserBuilder() {
     User._initializeBuilder(this);
   }
 
   UserBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _username = _$v.username;
-      _firstName = _$v.firstName;
-      _lastName = _$v.lastName;
-      _email = _$v.email;
-      _password = _$v.password;
-      _phone = _$v.phone;
-      _userStatus = _$v.userStatus;
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _username = $v.username;
+      _firstName = $v.firstName;
+      _lastName = $v.lastName;
+      _email = $v.email;
+      _password = $v.password;
+      _phone = $v.phone;
+      _userStatus = $v.userStatus;
       _$v = null;
     }
     return this;
@@ -147,14 +147,12 @@ class UserBuilder implements Builder<User, UserBuilder> {
 
   @override
   void replace(User other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$User;
   }
 
   @override
-  void update(void Function(UserBuilder) updates) {
+  void update(void Function(UserBuilder)? updates) {
     if (updates != null) updates(this);
   }
 

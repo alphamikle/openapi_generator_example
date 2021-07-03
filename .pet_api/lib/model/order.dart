@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.7
+// 
 
 // ignore_for_file: unused_import
 
@@ -13,31 +13,25 @@ part 'order.g.dart';
 
 abstract class Order implements Built<Order, OrderBuilder> {
 
-    @nullable
-    @BuiltValueField(wireName: r'id')
-    int get id;
+        @BuiltValueField(wireName: r'id')
+    int? get id;
 
-    @nullable
-    @BuiltValueField(wireName: r'petId')
-    int get petId;
+        @BuiltValueField(wireName: r'petId')
+    int? get petId;
 
-    @nullable
-    @BuiltValueField(wireName: r'quantity')
-    int get quantity;
+        @BuiltValueField(wireName: r'quantity')
+    int? get quantity;
 
-    @nullable
-    @BuiltValueField(wireName: r'shipDate')
-    DateTime get shipDate;
+        @BuiltValueField(wireName: r'shipDate')
+    DateTime? get shipDate;
 
     /// Order Status
-    @nullable
-    @BuiltValueField(wireName: r'status')
-    OrderStatusEnum get status;
+        @BuiltValueField(wireName: r'status')
+    OrderStatusEnum? get status;
     // enum statusEnum {  placed,  approved,  delivered,  };
 
-    @nullable
-    @BuiltValueField(wireName: r'complete')
-    bool get complete;
+        @BuiltValueField(wireName: r'complete')
+    bool? get complete;
 
     Order._();
 
@@ -57,9 +51,9 @@ class _$OrderSerializer implements StructuredSerializer<Order> {
     final String wireName = r'Order';
 
     @override
-    Iterable<Object> serialize(Serializers serializers, Order object,
+    Iterable<Object?> serialize(Serializers serializers, Order object,
         {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object>[];
+        final result = <Object?>[];
         if (object.id != null) {
             result
                 ..add(r'id')
@@ -100,7 +94,7 @@ class _$OrderSerializer implements StructuredSerializer<Order> {
     }
 
     @override
-    Order deserialize(Serializers serializers, Iterable<Object> serialized,
+    Order deserialize(Serializers serializers, Iterable<Object?> serialized,
         {FullType specifiedType = FullType.unspecified}) {
         final result = OrderBuilder();
 

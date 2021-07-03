@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.7
+// 
 
 // ignore_for_file: unused_import
 
@@ -12,13 +12,11 @@ part 'category.g.dart';
 
 abstract class Category implements Built<Category, CategoryBuilder> {
 
-    @nullable
-    @BuiltValueField(wireName: r'id')
-    int get id;
+        @BuiltValueField(wireName: r'id')
+    int? get id;
 
-    @nullable
-    @BuiltValueField(wireName: r'name')
-    String get name;
+        @BuiltValueField(wireName: r'name')
+    String? get name;
 
     Category._();
 
@@ -38,9 +36,9 @@ class _$CategorySerializer implements StructuredSerializer<Category> {
     final String wireName = r'Category';
 
     @override
-    Iterable<Object> serialize(Serializers serializers, Category object,
+    Iterable<Object?> serialize(Serializers serializers, Category object,
         {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object>[];
+        final result = <Object?>[];
         if (object.id != null) {
             result
                 ..add(r'id')
@@ -57,7 +55,7 @@ class _$CategorySerializer implements StructuredSerializer<Category> {
     }
 
     @override
-    Category deserialize(Serializers serializers, Iterable<Object> serialized,
+    Category deserialize(Serializers serializers, Iterable<Object?> serialized,
         {FullType specifiedType = FullType.unspecified}) {
         final result = CategoryBuilder();
 

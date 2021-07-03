@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:pet_api/api/pet_api.dart';
@@ -40,8 +38,10 @@ class _MyHomePageState extends State<MyHomePage> {
     final PetApi petApi = PetApi(dio, standardSerializers);
 
     try {
-      final int petId = Random().nextBool() ? 133 : 9;
-      final Response<Pet> response = await petApi.getPetById(petId, headers: <String, String>{'Authorization': 'Bearer special-key'});
+      // Call this method several times, if you see 404 error
+      final int petId = 7;
+      final bool useAuth = true;
+      final Response<Pet> response = await petApi.getPetById(petId, headers: useAuth ? <String, String>{'Authorization': 'Bearer special-key'} : null);
       setState(() {
         notice = response.data.toString();
       });
@@ -59,15 +59,17 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: const Text('OpenAPI Example'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              notice,
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                notice,
+                style: Theme.of(context).textTheme.headline4,
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(

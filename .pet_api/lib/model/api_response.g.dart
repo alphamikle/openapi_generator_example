@@ -1,5 +1,4 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// @dart=2.7
 
 part of 'api_response.dart';
 
@@ -9,13 +8,13 @@ part of 'api_response.dart';
 
 class _$ApiResponse extends ApiResponse {
   @override
-  final int code;
+  final int? code;
   @override
-  final String type;
+  final String? type;
   @override
-  final String message;
+  final String? message;
 
-  factory _$ApiResponse([void Function(ApiResponseBuilder) updates]) =>
+  factory _$ApiResponse([void Function(ApiResponseBuilder)? updates]) =>
       (new ApiResponseBuilder()..update(updates)).build();
 
   _$ApiResponse._({this.code, this.type, this.message}) : super._();
@@ -53,29 +52,30 @@ class _$ApiResponse extends ApiResponse {
 }
 
 class ApiResponseBuilder implements Builder<ApiResponse, ApiResponseBuilder> {
-  _$ApiResponse _$v;
+  _$ApiResponse? _$v;
 
-  int _code;
-  int get code => _$this._code;
-  set code(int code) => _$this._code = code;
+  int? _code;
+  int? get code => _$this._code;
+  set code(int? code) => _$this._code = code;
 
-  String _type;
-  String get type => _$this._type;
-  set type(String type) => _$this._type = type;
+  String? _type;
+  String? get type => _$this._type;
+  set type(String? type) => _$this._type = type;
 
-  String _message;
-  String get message => _$this._message;
-  set message(String message) => _$this._message = message;
+  String? _message;
+  String? get message => _$this._message;
+  set message(String? message) => _$this._message = message;
 
   ApiResponseBuilder() {
     ApiResponse._initializeBuilder(this);
   }
 
   ApiResponseBuilder get _$this {
-    if (_$v != null) {
-      _code = _$v.code;
-      _type = _$v.type;
-      _message = _$v.message;
+    final $v = _$v;
+    if ($v != null) {
+      _code = $v.code;
+      _type = $v.type;
+      _message = $v.message;
       _$v = null;
     }
     return this;
@@ -83,14 +83,12 @@ class ApiResponseBuilder implements Builder<ApiResponse, ApiResponseBuilder> {
 
   @override
   void replace(ApiResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ApiResponse;
   }
 
   @override
-  void update(void Function(ApiResponseBuilder) updates) {
+  void update(void Function(ApiResponseBuilder)? updates) {
     if (updates != null) updates(this);
   }
 

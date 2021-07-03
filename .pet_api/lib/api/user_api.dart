@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.7
+// 
 
 // ignore_for_file: unused_import
 
@@ -25,12 +25,12 @@ class UserApi {
   /// This can only be done by the logged in user.
   Future<Response<void>> createUser(
     User body, { 
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/user',
@@ -56,11 +56,10 @@ class UserApi {
     const _type = FullType(User);
     _bodyData = _serializers.serialize(body, specifiedType: _type);
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+_request.data = _bodyData;
+    
+    final _response = await _dio.fetch<dynamic>(_request);
+    
 
     return _response;
   }
@@ -70,12 +69,12 @@ class UserApi {
   /// 
   Future<Response<void>> createUsersWithArrayInput(
     BuiltList<User> body, { 
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/user/createWithArray',
@@ -101,11 +100,10 @@ class UserApi {
     const _type = FullType(BuiltList, [FullType(User)]);
     _bodyData = _serializers.serialize(body, specifiedType: _type);
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+_request.data = _bodyData;
+    
+    final _response = await _dio.fetch<dynamic>(_request);
+    
 
     return _response;
   }
@@ -115,12 +113,12 @@ class UserApi {
   /// 
   Future<Response<void>> createUsersWithListInput(
     BuiltList<User> body, { 
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/user/createWithList',
@@ -146,11 +144,10 @@ class UserApi {
     const _type = FullType(BuiltList, [FullType(User)]);
     _bodyData = _serializers.serialize(body, specifiedType: _type);
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+_request.data = _bodyData;
+    
+    final _response = await _dio.fetch<dynamic>(_request);
+    
 
     return _response;
   }
@@ -160,12 +157,12 @@ class UserApi {
   /// This can only be done by the logged in user.
   Future<Response<void>> deleteUser(
     String username, { 
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/user/{username}'.replaceAll('{' r'username' '}', username.toString()),
@@ -188,11 +185,10 @@ class UserApi {
 
     dynamic _bodyData;
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+_request.data = _bodyData;
+    
+    final _response = await _dio.fetch<dynamic>(_request);
+    
 
     return _response;
   }
@@ -202,12 +198,12 @@ class UserApi {
   /// 
   Future<Response<User>> getUserByName(
     String username, { 
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/user/{username}'.replaceAll('{' r'username' '}', username.toString()),
@@ -230,11 +226,10 @@ class UserApi {
 
     dynamic _bodyData;
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+_request.data = _bodyData;
+    
+    final _response = await _dio.fetch<dynamic>(_request);
+    
 
     const _responseType = FullType(User);
     final _responseData = _serializers.deserialize(
@@ -246,7 +241,7 @@ class UserApi {
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
-      request: _response.request,
+      requestOptions: _response.requestOptions,
       redirects: _response.redirects,
       statusCode: _response.statusCode,
       statusMessage: _response.statusMessage,
@@ -260,12 +255,12 @@ class UserApi {
   Future<Response<String>> loginUser(
     String username,
     String password, { 
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/user/login',
@@ -292,11 +287,10 @@ class UserApi {
 
     dynamic _bodyData;
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+_request.data = _bodyData;
+    
+    final _response = await _dio.fetch<dynamic>(_request);
+    
 
     final String _responseData = _response.data as String;
 
@@ -304,7 +298,7 @@ class UserApi {
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
-      request: _response.request,
+      requestOptions: _response.requestOptions,
       redirects: _response.redirects,
       statusCode: _response.statusCode,
       statusMessage: _response.statusMessage,
@@ -316,12 +310,12 @@ class UserApi {
   ///
   /// 
   Future<Response<void>> logoutUser({ 
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/user/logout',
@@ -344,11 +338,10 @@ class UserApi {
 
     dynamic _bodyData;
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+_request.data = _bodyData;
+    
+    final _response = await _dio.fetch<dynamic>(_request);
+    
 
     return _response;
   }
@@ -359,12 +352,12 @@ class UserApi {
   Future<Response<void>> updateUser(
     String username,
     User body, { 
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/user/{username}'.replaceAll('{' r'username' '}', username.toString()),
@@ -390,11 +383,10 @@ class UserApi {
     const _type = FullType(User);
     _bodyData = _serializers.serialize(body, specifiedType: _type);
 
-    final _response = await _dio.request<dynamic>(
-      _request.path,
-      data: _bodyData,
-      options: _request,
-    );
+_request.data = _bodyData;
+    
+    final _response = await _dio.fetch<dynamic>(_request);
+    
 
     return _response;
   }

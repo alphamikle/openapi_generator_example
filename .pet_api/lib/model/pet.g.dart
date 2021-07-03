@@ -1,5 +1,4 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// @dart=2.7
 
 part of 'pet.dart';
 
@@ -60,40 +59,37 @@ class _$PetStatusEnumSerializer implements PrimitiveSerializer<PetStatusEnum> {
   @override
   PetStatusEnum deserialize(Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
-      PetStatusEnum.valueOf(_fromWire[serialized] ?? serialized as String);
+      PetStatusEnum.valueOf(
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 
 class _$Pet extends Pet {
   @override
-  final int id;
+  final int? id;
   @override
-  final Category category;
+  final Category? category;
   @override
   final String name;
   @override
   final BuiltList<String> photoUrls;
   @override
-  final BuiltList<Tag> tags;
+  final BuiltList<Tag>? tags;
   @override
-  final PetStatusEnum status;
+  final PetStatusEnum? status;
 
-  factory _$Pet([void Function(PetBuilder) updates]) =>
+  factory _$Pet([void Function(PetBuilder)? updates]) =>
       (new PetBuilder()..update(updates)).build();
 
   _$Pet._(
       {this.id,
       this.category,
-      this.name,
-      this.photoUrls,
+      required this.name,
+      required this.photoUrls,
       this.tags,
       this.status})
       : super._() {
-    if (name == null) {
-      throw new BuiltValueNullFieldError('Pet', 'name');
-    }
-    if (photoUrls == null) {
-      throw new BuiltValueNullFieldError('Pet', 'photoUrls');
-    }
+    BuiltValueNullFieldError.checkNotNull(name, 'Pet', 'name');
+    BuiltValueNullFieldError.checkNotNull(photoUrls, 'Pet', 'photoUrls');
   }
 
   @override
@@ -139,45 +135,47 @@ class _$Pet extends Pet {
 }
 
 class PetBuilder implements Builder<Pet, PetBuilder> {
-  _$Pet _$v;
+  _$Pet? _$v;
 
-  int _id;
-  int get id => _$this._id;
-  set id(int id) => _$this._id = id;
+  int? _id;
+  int? get id => _$this._id;
+  set id(int? id) => _$this._id = id;
 
-  CategoryBuilder _category;
+  CategoryBuilder? _category;
   CategoryBuilder get category => _$this._category ??= new CategoryBuilder();
-  set category(CategoryBuilder category) => _$this._category = category;
+  set category(CategoryBuilder? category) => _$this._category = category;
 
-  String _name;
-  String get name => _$this._name;
-  set name(String name) => _$this._name = name;
+  String? _name;
+  String? get name => _$this._name;
+  set name(String? name) => _$this._name = name;
 
-  ListBuilder<String> _photoUrls;
+  ListBuilder<String>? _photoUrls;
   ListBuilder<String> get photoUrls =>
       _$this._photoUrls ??= new ListBuilder<String>();
-  set photoUrls(ListBuilder<String> photoUrls) => _$this._photoUrls = photoUrls;
+  set photoUrls(ListBuilder<String>? photoUrls) =>
+      _$this._photoUrls = photoUrls;
 
-  ListBuilder<Tag> _tags;
+  ListBuilder<Tag>? _tags;
   ListBuilder<Tag> get tags => _$this._tags ??= new ListBuilder<Tag>();
-  set tags(ListBuilder<Tag> tags) => _$this._tags = tags;
+  set tags(ListBuilder<Tag>? tags) => _$this._tags = tags;
 
-  PetStatusEnum _status;
-  PetStatusEnum get status => _$this._status;
-  set status(PetStatusEnum status) => _$this._status = status;
+  PetStatusEnum? _status;
+  PetStatusEnum? get status => _$this._status;
+  set status(PetStatusEnum? status) => _$this._status = status;
 
   PetBuilder() {
     Pet._initializeBuilder(this);
   }
 
   PetBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _category = _$v.category?.toBuilder();
-      _name = _$v.name;
-      _photoUrls = _$v.photoUrls?.toBuilder();
-      _tags = _$v.tags?.toBuilder();
-      _status = _$v.status;
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _category = $v.category?.toBuilder();
+      _name = $v.name;
+      _photoUrls = $v.photoUrls.toBuilder();
+      _tags = $v.tags?.toBuilder();
+      _status = $v.status;
       _$v = null;
     }
     return this;
@@ -185,14 +183,12 @@ class PetBuilder implements Builder<Pet, PetBuilder> {
 
   @override
   void replace(Pet other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Pet;
   }
 
   @override
-  void update(void Function(PetBuilder) updates) {
+  void update(void Function(PetBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
@@ -204,12 +200,12 @@ class PetBuilder implements Builder<Pet, PetBuilder> {
           new _$Pet._(
               id: id,
               category: _category?.build(),
-              name: name,
+              name: BuiltValueNullFieldError.checkNotNull(name, 'Pet', 'name'),
               photoUrls: photoUrls.build(),
               tags: _tags?.build(),
               status: status);
     } catch (_) {
-      String _$failedField;
+      late String _$failedField;
       try {
         _$failedField = 'category';
         _category?.build();
